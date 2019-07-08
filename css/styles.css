@@ -36,14 +36,12 @@ figure {
   padding: 0;
 }
 
-
 /* CLEARFIX - for ensuring floated elements are contained in their parent */
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
-
 
 /* NAVIGATION styles */
 .site-logo {
@@ -75,17 +73,28 @@ figure {
   }
   .site-nav-list, .site-nav-item { 
     display: inline-block; 
-    width: 10%; 
-    margin-left: 20px; 
+    width: 10%;  
   }
   .site-nav-list:first-child { 
-    margin-top: 70px; 
+    margin-top: 80px; 
+  } 
+  .site-nav-list { 
+    width: 106%;   
+    height: 100px; 
+  }
+  li.site-nav-item { 
+    padding: 30px; 
+    margin-left: -5px; 
+    width: 100%; 
+    height: 100px; 
+    display: block; 
   }
   .site-logo { 
     position: fixed; 
     z-index: 3; 
     width: 50px; 
-    height: 50px; 
+    height: 50px;
+    margin-left: -2px;  
   }
   .site-nav-item span { 
     display: flex; 
@@ -97,7 +106,7 @@ figure {
     margin-left: 20px; 
   }
   body { 
-    margin-left: 80px; 
+    margin-left: 70px; 
   }
   footer { 
     display: inline-block; 
@@ -116,6 +125,7 @@ figure {
     padding: 30px; 
     padding-bottom: 22px; 
   }
+ 
 }
 
 @media (min-width: 992px) {
@@ -131,11 +141,35 @@ figure {
   .movie .first-poster { 
     display: none; 
   }
-  article.movie:nth-child(n+2) { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-gap: 4px; 
+
+  main {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 33.33%); 
   }
+  article.movie:first-child { 
+    grid-column-start: 1; 
+    grid-column-end: 4; 
+  }
+  body {
+    margin-left: 80px; 
+    max-width: 1200px;
+  }
+  footer { 
+    width: 25%; 
+    margin-left: 220px; 
+  }
+  nav.footer-nav { 
+    padding-top: 10px; 
+    padding-left: 40px; 
+    position: relative; 
+    z-index: 3; 
+  }
+  
+}
+@media (min-width: 1270px ) {
+   body { 
+     max-width: 1470px; 
+   }
 }
 .site-nav-list,
 .footer-nav-list {
@@ -159,11 +193,11 @@ figure {
   font-size: 1.75rem;
 }
 
-.site-nav-item:hover {
+ .site-nav-item:hover {
   background-color: #333333;
   color: #ffffff;
   cursor: pointer;
-}
+} 
 
 .site-nav-item-label {
   display: block;
