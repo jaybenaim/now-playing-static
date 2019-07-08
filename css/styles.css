@@ -170,6 +170,11 @@ figure {
    body { 
      max-width: 1470px; 
    }
+   article.movie:first-child { 
+    margin: 0 auto ; 
+    border-left: 50px solid rgb(5, 3, 22); 
+    border-right: 50px solid rgb(5, 3, 22); 
+   }
 }
 .site-nav-list,
 .footer-nav-list {
