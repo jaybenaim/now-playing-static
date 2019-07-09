@@ -113,7 +113,9 @@ figure {
   footer { 
     display: inline-block; 
     margin: 0 auto; 
-    margin-left: 40px; 
+    margin-left: 40px;
+    width: 450px; 
+    
   }
   footer.site-footer { 
     height: 20px;  
@@ -122,10 +124,13 @@ figure {
     position: relative; 
     left: 360px; 
     top: 72px; 
-    background: #333333; 
+    background: black; 
     color: white;  
     padding: 30px; 
-    padding-bottom: 22px; 
+    padding-bottom: 22px;
+  }
+  footer .about { 
+    background: black; 
   }
  
 }
@@ -143,7 +148,9 @@ figure {
   .movie .first-poster { 
     display: none; 
   }
-
+  img.movie-backdrop { 
+    display: none; 
+}
   main {
     display: inline-grid;
     grid-template-columns: repeat(3, 33.33%); 
@@ -156,15 +163,37 @@ figure {
     margin-left: 80px; 
     max-width: 1200px;
   }
-  footer { 
-    width: 25%; 
+  /* footer { 
+    width: 40%; 
     margin-left: 220px; 
   }
-  nav.footer-nav { 
-    padding-top: 10px; 
+  nav.footer-nav {  
     padding-left: 40px; 
+    margin-left: 100px; 
     position: relative; 
     z-index: 3; 
+  } */
+  footer { 
+    display: inline-block; 
+    margin: 0 auto; 
+    margin-left: 200px;
+    width: 450px; 
+    
+  }
+  footer.site-footer { 
+    height: 20px;  
+  }
+  nav.footer-nav { 
+    position: relative; 
+    left: 360px; 
+    top: 72px; 
+    background: black; 
+    color: white;  
+    padding: 30px; 
+    padding-bottom: 22px;
+  }
+  footer .about { 
+    background: black; 
   }
   
 }
@@ -176,6 +205,9 @@ figure {
     margin: 0 auto ; 
     border-left: 50px solid rgb(5, 3, 22); 
     border-right: 50px solid rgb(5, 3, 22); 
+   }
+   footer { 
+    margin-left: 300px;
    }
 }
 .site-nav-list,
